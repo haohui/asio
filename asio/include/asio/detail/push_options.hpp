@@ -44,7 +44,9 @@
 # endif
 
 # if !defined(_WIN32) && !defined(__WIN32__) && !defined(WIN32)
+#ifndef ASIO_HIDDEN_VISIBILITY
 #  pragma GCC visibility push (default)
+#endif
 # endif // !defined(_WIN32) && !defined(__WIN32__) && !defined(WIN32)
 
 #elif defined(__GNUC__)
@@ -68,7 +70,9 @@
 # endif
 
 # if (__GNUC__ == 4 && __GNUC_MINOR__ >= 1) || (__GNUC__ > 4)
+#ifndef ASIO_HIDDEN_VISIBILITY
 #  pragma GCC visibility push (default)
+#endif
 # endif // (__GNUC__ == 4 && __GNUC_MINOR__ >= 1) || (__GNUC__ > 4)
 
 # if (__GNUC__ >= 7)
